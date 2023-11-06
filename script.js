@@ -1,9 +1,9 @@
 // location Info
 {
-  const allowedAreas = [
-    { lat: 30.071711712194215, lon: 31.220952436284982 }, // Giza, Egypt
-    // Add more allowed areas as needed
-  ];
+  // const allowedAreas = [
+  //   { lat: 30.071711712194215, lon: 31.220952436284982 }, // Giza, Egypt
+  //   // Add more allowed areas as needed
+  // ];
 
   const resultParagraph = document.getElementById('result');
   const result1Paragraph = document.getElementById('result1');
@@ -58,6 +58,26 @@
       rotateMessage.style.display = 'none';
     });
   });
+  function submitForm() {
+    // Get the user's Arabic name and student ID
+    const arabicName = document.getElementById('arabicName').value;
+    const studentID = document.getElementById('studentID').value;
+  
+    // Display the success message
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+  
+    // You can also clear the form fields here if needed
+    document.getElementById('arabicName').value = '';
+    document.getElementById('studentID').value = '';
+  
+    // Display the user's information for each lecture with dir="rtl"
+    document.getElementById('userInputDisplay1').innerHTML = `<div dir="rtl">مرحبا ${arabicName} 😃 ID ${studentID}</div>`;
+    document.getElementById('userInputDisplay2').innerHTML = `<div dir="rtl">مرحبا ${arabicName} 😃 ID ${studentID}</div>`;
+    document.getElementById('userInputDisplay3').innerHTML = `<div dir="rtl">مرحبا ${arabicName} 😃 ID ${studentID}</div>`;
+    document.getElementById('userInputDisplay4').innerHTML = `<div dir="rtl">مرحبا ${arabicName} 😃 ID ${studentID}</div>`;
+  }
+  
 }
 //end of script
 
